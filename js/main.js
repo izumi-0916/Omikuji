@@ -4,7 +4,21 @@
   const btn = document.getElementById('btn');
 
   btn.addEventListener('click', () => {
-    const results = ['大吉', '吉', 'きち', '中吉', '中吉', '小吉', '小吉', '末吉', '末吉', '凶'];
-    btn.textContent = results[Math.floor(Math.random() * results.length)];
+    const n = Math.random();
+    if (n < 0.05){
+      btn.textContent = '大吉';
+    }else if (n < 0.4){
+      btn.textContent = '吉';
+    }else if (n < 0.55){
+      btn.textContent = '中吉';
+    }else if (n < 0.7){
+      btn.textContent = '小吉';
+    }else if (n < 0.85){
+      btn.textContent = '末吉';
+    }else if (n < 0.95){
+      btn.textContent = '凶';
+    }else{
+      btn.textContent = '大凶';
+    }
   });
 }
